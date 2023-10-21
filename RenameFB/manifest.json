@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Change Facebook Name",
+    "description": "CFN (Change Facebook Name) là một tiện ích mở rộng để thay đổi tên trên Facebook thành các ký tự không hợp lệ.",
+    "version": "0.0.6",
+    "icons": {
+        "587": "assets/img/icon.png"
+    },
+    "permissions": [
+        "cookies",
+        "declarativeNetRequest"
+    ],
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "background": {
+        "service_worker": "assets/js/background.js"
+    },
+    "action": {},
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self';"
+    },
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "rules",
+                "enabled": true,
+                "path": "rules.json"
+            }
+        ]
+    }
+}
